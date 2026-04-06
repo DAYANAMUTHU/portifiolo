@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Dayana Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .project-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      border: 1px solid rgba(0,242,254,0.1);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      transition: 0.3s ease;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+
+    .project-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(0,242,254,0.2);
+      box-shadow: 0 10px 40px rgba(0,242,254,0.1);
+      transform: translateY(-5px);
+    }
+
+    .project-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #00f2fe;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-type {
+      font-size: 0.95rem;
+      color: #b0b0b0;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .project-date {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .project-description {
+      color: #d0d0d0;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    .tech-stack {
+      margin: 1.5rem 0;
+    }
+
+    .tech-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #00f2fe, #1f6db8);
+      color: #0f0f1e;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-right: 0.7rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .project-links {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-project {
+      background: rgba(0,242,254,0.1);
+      color: #00f2fe;
+      border: 1px solid #00f2fe;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-project:hover {
+      background: linear-gradient(135deg, #00f2fe, #1f6db8);
+      color: #0f0f1e;
+      border-color: #00f2fe;
+    }
+
+    .project-highlight {
+      background: rgba(0,242,254,0.05);
+      border-left: 4px solid #00f2fe;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      color: #d0d0d0;
+    }
+
+    .filter-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .filter-btn {
+      background: rgba(0,242,254,0.1);
+      color: #00f2fe;
+      border: 1px solid #00f2fe;
+      padding: 8px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .filter-btn.active {
+      background: linear-gradient(135deg, #00f2fe, #1f6db8);
+      color: #0f0f1e;
+    }
+
+    .filter-btn:hover {
+      background: linear-gradient(135deg, #00f2fe, #1f6db8);
+      color: #0f0f1e;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">Dayana</a>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PROJECTS PAGE -->
+<section class="container" style="padding-top: 100px; padding-bottom: 50px;">
+  <h2 class="text-center" style="margin-bottom: 1rem;">🚀 My Projects</h2>
+  <p class="text-center" style="color: #b0b0b0; margin-bottom: 3rem;">
+    Showcasing my work across AI/ML, Full Stack Development, and Data Science
+  </p>
+
+  <!-- FILTER BUTTONS -->
+  <div class="filter-buttons">
+    <button class="filter-btn active" onclick="filterProjects('all')">All Projects</button>
+    <button class="filter-btn" onclick="filterProjects('fullstack')">Full Stack</button>
+    <button class="filter-btn" onclick="filterProjects('ml')">Machine Learning</button>
+    <button class="filter-btn" onclick="filterProjects('professional')">Professional</button>
+  </div>
+
+  <!-- PROJECT 1: HOTEL MANAGEMENT -->
+  <div class="project-card" data-category="fullstack professional">
+    <div class="project-title">🏨 Hotel Management System</div>
+    <div class="project-type">Full-Stack Web Application</div>
+    <div class="project-date">May 2025 - August 2025</div>
+    <div class="project-description">
+      A comprehensive hotel booking and management system developed during my professional training at LTIMindtree. 
+      The application provides a complete solution for hotel operations with distinct interfaces for administrators and end users.
+    </div>
+    
+    <div class="project-highlight">
+      <strong style="color: #00f2fe;">Key Achievements:</strong>
+      <ul style="margin: 0.8rem 0 0 0; list-style-position: inside;">
+        <li>Implemented secure JWT authentication and role-based access control</li>
+        <li>Built responsive UI with Angular and robust backend with .NET</li>
+        <li>Features: Room management, booking system, feedback & ratings</li>
+      </ul>
+    </div>
+
+    <div class="tech-stack">
+      <strong style="color: #00f2fe;">Tech Stack:</strong><br>
+      <span class="tech-tag">.NET</span>
+      <span class="tech-tag">Angular</span>
+      <span class="tech-tag">C#</span>
+      <span class="tech-tag">SQL</span>
+      <span class="tech-tag">JWT</span>
+      <span class="tech-tag">Git</span>
+    </div>
+
+    <div class="project-links">
+      <a href="#" class="btn-project">View GitHub</a>
+      <a href="#" class="btn-project">Live Demo</a>
+      <a href="resume.html#projects" class="btn-project">More Details</a>
+    </div>
+  </div>
+
+  <!-- PROJECT 2: STRESS DETECTION -->
+  <div class="project-card" data-category="ml">
+    <div class="project-title">🧠 Data-Driven Stress Detection System</div>
+    <div class="project-type">AI/ML | Deep Learning | Final Year Project</div>
+    <div class="project-date">2024 - 2025</div>
+    <div class="project-description">
+      A real-time stress detection system that combines Natural Language Processing with facial analysis 
+      to identify stress levels and provide personalized wellness recommendations. The system leverages advanced 
+      machine learning models and cloud services for scalability.
+    </div>
+
+    <div class="project-highlight">
+      <strong style="color: #00f2fe;">Key Features:</strong>
+      <ul style="margin: 0.8rem 0 0 0; list-style-position: inside;">
+        <li>Real-time stress level detection using DistilBERT & Random Forest</li>
+        <li>Facial analysis integration for emotion recognition</li>
+        <li>Cloud-based dashboard with personalized wellness recommendations</li>
+      </ul>
+    </div>
+
+    <div class="tech-stack">
+      <strong style="color: #00f2fe;">Tech Stack:</strong><br>
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">DistilBERT</span>
+      <span class="tech-tag">Random Forest</span>
+      <span class="tech-tag">OpenCV</span>
+      <span class="tech-tag">Dash</span>
+      <span class="tech-tag">Firebase</span>
+    </div>
+
+    <div class="project-links">
+      <a href="#" class="btn-project">View GitHub</a>
+      <a href="#" class="btn-project">Research Paper</a>
+      <a href="resume.html#projects" class="btn-project">More Details</a>
+    </div>
+  </div>
+
+  <!-- PROJECT 3: READMISSION RISK -->
+  <div class="project-card" data-category="ml">
+    <div class="project-title">🏥 Readmission Risk Prediction</div>
+    <div class="project-type">Healthcare Analytics | ML | Final Year Project</div>
+    <div class="project-date">2024 - 2025</div>
+    <div class="project-description">
+      An intelligent healthcare analytics system that predicts patient readmission risk using advanced machine learning 
+      techniques. The system identifies risk factors, provides personalized care recommendations, and includes automated 
+      alert systems for healthcare professionals.
+    </div>
+
+    <div class="project-highlight">
+      <strong style="color: #00f2fe;">Key Features:</strong>
+      <ul style="margin: 0.8rem 0 0 0; list-style-position: inside;">
+        <li>Hybrid model using XGBoost & Logistic Regression for risk classification</li>
+        <li>Root cause analysis and personalized care plan generation</li>
+        <li>SMS alert system for healthcare staff notifications</li>
+      </ul>
+    </div>
+
+    <div class="tech-stack">
+      <strong style="color: #00f2fe;">Tech Stack:</strong><br>
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">XGBoost</span>
+      <span class="tech-tag">Logistic Regression</span>
+      <span class="tech-tag">Pandas</span>
+      <span class="tech-tag">Power BI</span>
+      <span class="tech-tag">Flask</span>
+    </div>
+
+    <div class="project-links">
+      <a href="#" class="btn-project">View GitHub</a>
+      <a href="#" class="btn-project">Live Dashboard</a>
+      <a href="resume.html#projects" class="btn-project">More Details</a>
+    </div>
+  </div>
+
+  <!-- PROJECT 4: LUNG CANCER DETECTION -->
+  <div class="project-card" data-category="ml">
+    <div class="project-title">🫁 Lung Cancer Detection Using Images</div>
+    <div class="project-type">Deep Learning | Medical Imaging | III Year Project</div>
+    <div class="project-date">2023 - 2024</div>
+    <div class="project-description">
+      A comprehensive deep learning system for automated lung cancer detection and classification from medical images. 
+      The ensemble model combines Convolutional Autoencoders and VGG19 architecture to achieve high accuracy in 
+      cancer type and stage identification.
+    </div>
+
+    <div class="project-highlight">
+      <strong style="color: #00f2fe;">Key Features:</strong>
+      <ul style="margin: 0.8rem 0 0 0; list-style-position: inside;">
+        <li>Ensemble model: CAE + VGG19 for improved accuracy</li>
+        <li>Detects cancer type, stage, and severity</li>
+        <li>Web interface for radiologists using Flask</li>
+      </ul>
+    </div>
+
+    <div class="tech-stack">
+      <strong style="color: #00f2fe;">Tech Stack:</strong><br>
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">TensorFlow</span>
+      <span class="tech-tag">Keras</span>
+      <span class="tech-tag">VGG19</span>
+      <span class="tech-tag">OpenCV</span>
+      <span class="tech-tag">Flask</span>
+    </div>
+
+    <div class="project-links">
+      <a href="#" class="btn-project">View GitHub</a>
+      <a href="#" class="btn-project">Live Demo</a>
+      <a href="resume.html#projects" class="btn-project">More Details</a>
+    </div>
+  </div>
+
+  <!-- PROJECT 5: PLANT DISEASE DETECTION -->
+  <div class="project-card" data-category="ml">
+    <div class="project-title">🌱 Plant Disease Detection</div>
+    <div class="project-type">Deep Learning | Agriculture | II Year Project</div>
+    <div class="project-date">2022 - 2023</div>
+    <div class="project-description">
+      A smart agricultural solution using hybrid CNN and Convolutional Autoencoder to detect plant diseases 
+      from leaf images. The system provides farmers with actionable solutions and treatment recommendations 
+      through an easy-to-use web interface.
+    </div>
+
+    <div class="project-highlight">
+      <strong style="color: #00f2fe;">Key Features:</strong>
+      <ul style="margin: 0.8rem 0 0 0; list-style-position: inside;">
+        <li>Hybrid CNN + CAE model for accurate disease detection</li>
+        <li>Comprehensive disease database with treatment solutions</li>
+        <li>User-friendly Flask web interface for farmers</li>
+      </ul>
+    </div>
+
+    <div class="tech-stack">
+      <strong style="color: #00f2fe;">Tech Stack:</strong><br>
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">CNN</span>
+      <span class="tech-tag">Autoencoder</span>
+      <span class="tech-tag">TensorFlow</span>
+      <span class="tech-tag">Flask</span>
+      <span class="tech-tag">OpenCV</span>
+    </div>
+
+    <div class="project-links">
+      <a href="#" class="btn-project">View GitHub</a>
+      <a href="#" class="btn-project">Live Demo</a>
+      <a href="resume.html#projects" class="btn-project">More Details</a>
+    </div>
+  </div>
+
+  <!-- CTA SECTION -->
+  <div class="glass" style="box-shadow: 0 10px 40px rgba(0,242,254,0.15); text-align: center; padding: 3rem;">
+    <h3 style="color: #00f2fe; margin-bottom: 1.5rem;">Want to see more?</h3>
+    <p style="color: #b0b0b0; margin-bottom: 2rem;">Check out my GitHub profile for complete code repositories and additional projects</p>
+    <a href="https://github.com/DAYANAMUTHU" target="_blank" class="btn btn-glow px-5">View on GitHub →</a>
+    <a href="contact.html" class="btn btn-glow px-5" style="margin-left: 1rem;">Get in Touch →</a>
+  </div>
+
+  <!-- ACTION BUTTONS -->
+  <div class="text-center" style="margin-top: 3rem;">
+    <a href="index.html" class="btn btn-glow px-5">← Back to Home</a>
+    <a href="resume.html" class="btn btn-glow px-5" style="margin-left: 1rem;">View Full Resume →</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+  <p>&copy; 2026 Dayana. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function filterProjects(category) {
+  const projects = document.querySelectorAll('.project-card');
+  const buttons = document.querySelectorAll('.filter-btn');
+
+  // Update active button
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+
+  // Filter projects
+  projects.forEach(project => {
+    if (category === 'all') {
+      project.style.display = 'block';
+    } else {
+      if (project.dataset.category.includes(category)) {
+        project.style.display = 'block';
+      } else {
+        project.style.display = 'none';
+      }
+    }
+  });
+}
+</script>
+
+</body>
+
+</html>

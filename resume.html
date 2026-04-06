@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Dayana Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .resume-section {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      border: 1px solid rgba(0,242,254,0.1);
+      transition: 0.3s ease;
+    }
+
+    .resume-section:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(0,242,254,0.2);
+      box-shadow: 0 8px 32px rgba(0,242,254,0.1);
+    }
+
+    .resume-section h3 {
+      color: #00f2fe;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid rgba(0,242,254,0.3);
+      padding-bottom: 1rem;
+    }
+
+    .experience-item, .education-item {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-left: 3px solid #00f2fe;
+      padding-left: 1.5rem;
+    }
+
+    .experience-item:last-child, .education-item:last-child {
+      border-left: 3px solid rgba(0,242,254,0.3);
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .job-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #00f2fe;
+      margin-bottom: 0.3rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .company, .school {
+      font-size: 1rem;
+      color: #b0b0b0;
+      margin-bottom: 0.3rem;
+      font-weight: 500;
+    }
+
+    .date {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 0.8rem;
+      font-style: italic;
+    }
+
+    .description {
+      color: #d0d0d0;
+      line-height: 1.8;
+      margin-bottom: 0.5rem;
+    }
+
+    .description ul {
+      margin-top: 0.8rem;
+      margin-left: 1rem;
+      list-style: none;
+    }
+
+    .description li {
+      color: #d0d0d0;
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .description li:before {
+      content: "▸";
+      color: #00f2fe;
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    .summary-text {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #d0d0d0;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">Dayana</a>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- RESUME SECTION -->
+<section class="container" style="padding-top: 100px; padding-bottom: 50px;">
+  <h2 class="text-center" style="margin-bottom: 3rem;">My Resume</h2>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <div class="resume-section">
+    <h3>📋 Objective</h3>
+    <p class="summary-text">
+      Dedicated and adaptable AI/ML Enthusiast with strong skills in Machine Learning, Deep Learning, and 
+      Software Development. Passionate about problem-solving, data-driven decision-making, and developing 
+      impactful solutions. Eager to contribute to dynamic teams, enhance technical capabilities, and deliver meaningful projects.
+    </p>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="resume-section">
+    <h3>🎓 Education</h3>
+    
+    <div class="education-item">
+      <div class="job-title">B.Tech — AI & Data Science</div>
+      <div class="school">RMK Engineering College</div>
+      <div class="date">2021 - 2025</div>
+      <div class="description">
+        CGPA: 8.52
+        <ul>
+          <li>Specialized in Artificial Intelligence and Data Science</li>
+          <li>Completed coursework in Machine Learning, Deep Learning, Data Analytics, and Software Development</li>
+          <li>Active participant in college technical events and competitions</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="education-item">
+      <div class="job-title">HSC (Higher Secondary Certificate)</div>
+      <div class="school">Velammal Matric Hr Sec School, Ponneri</div>
+      <div class="date">2020 - 2021</div>
+      <div class="description">
+        Percentage: 89.82%
+      </div>
+    </div>
+
+    <div class="education-item">
+      <div class="job-title">SSLC (Secondary School Leaving Certificate)</div>
+      <div class="school">Velammal Matric Hr Sec School, Ponneri</div>
+      <div class="date">2018 - 2019</div>
+      <div class="description">
+        Percentage: 90%
+      </div>
+    </div>
+
+    <div class="education-item">
+      <div class="job-title">Certifications</div>
+      <div class="school">Online Platforms</div>
+      <div class="date">2023 - 2025</div>
+      <div class="description">
+        <ul>
+          <li>.NET + Angular Certification — LTIMindtree</li>
+          <li>Infosys Springboard - Deep Learning, ML Foundation, Python, Cloud</li>
+          <li>NPTEL - Blockchain, Data Analytics with Python</li>
+          <li>edX - Python Basics for Data Science</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="resume-section">
+    <h3>💼 Professional Experience</h3>
+    
+    <div class="experience-item">
+      <div class="job-title">Software Engineer</div>
+      <div class="company">LTIMindtree | Remote</div>
+      <div class="date">May 2025 - September 2025</div>
+      <div class="description">
+        Completed intensive training and developed enterprise-level applications
+        <ul>
+          <li>Completed comprehensive .NET and Angular training during onboarding (May–Aug 2025)</li>
+          <li>Designed and developed a full-stack Hotel Management System using .NET and Angular</li>
+          <li>Implemented role-based access control for Admin and User roles with distinct functionalities</li>
+          <li>Secured application using JWT authentication and authorization mechanisms</li>
+          <li>Collaborated with agile teams to build scalable and maintainable enterprise applications</li>
+          <li>Tech Stack: .NET, Angular, C#, SQL, JWT, Git</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS SUMMARY -->
+  <div class="resume-section">
+    <h3>🛠️ Technical Skills</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="description" style="margin-bottom: 1.5rem;">
+          <strong style="color: #00f2fe;">Programming Languages:</strong><br>
+          Python, C#, HTML, CSS, JavaScript
+        </div>
+        <div class="description" style="margin-bottom: 1.5rem;">
+          <strong style="color: #00f2fe;">Databases & Tools:</strong><br>
+          SQL, DBMS, Excel, Google Colab
+        </div>
+        <div class="description">
+          <strong style="color: #00f2fe;">Soft Skills:</strong><br>
+          Leadership, Teamwork, Communication, Problem Solving, Time Management
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="description" style="margin-bottom: 1.5rem;">
+          <strong style="color: #00f2fe;">Frameworks & Platforms:</strong><br>
+          .NET, Angular, Firebase, Flask, Django
+        </div>
+        <div class="description" style="margin-bottom: 1.5rem;">
+          <strong style="color: #00f2fe;">ML/AI & Tools:</strong><br>
+          Machine Learning, Deep Learning, TensorFlow, Power BI, Visual Studio, Git
+        </div>
+        <div class="description">
+          <strong style="color: #00f2fe;">Specialization:</strong><br>
+          AI & Data Science, Full Stack Development, Data Analytics
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="resume-section">
+    <h3>🚀 Notable Projects</h3>
+    
+    <div class="experience-item">
+      <div class="job-title">Hotel Management System</div>
+      <div class="company">LTIMindtree | Full-Stack Development</div>
+      <div class="date">May 2025 - August 2025</div>
+      <div class="description">
+        Full-stack hotel booking system developed during professional training
+        <ul>
+          <li>Built using .NET backend and Angular frontend with JWT authentication</li>
+          <li>Implemented role-based access for Admin and User functionalities</li>
+          <li>Features: room management, booking, feedback, user authorization</li>
+          <li>Tech Stack: .NET, Angular, C#, SQL, JWT, Git</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="experience-item">
+      <div class="job-title">Data-Driven Stress Detection System</div>
+      <div class="company">Final Year Project</div>
+      <div class="date">2024 - 2025</div>
+      <div class="description">
+        Real-time stress detection with personalized wellness recommendations
+        <ul>
+          <li>Integrated DistilBERT for NLP and Random Forest for classification</li>
+          <li>Implemented facial analysis and Dash dashboards for visualization</li>
+          <li>Cloud deployment using Firebase for real-time data storage</li>
+          <li>Provides personalized wellness recommendations based on stress levels</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="experience-item">
+      <div class="job-title">Readmission Risk Prediction</div>
+      <div class="company">Final Year Project</div>
+      <div class="date">2024 - 2025</div>
+      <div class="description">
+        Healthcare analytics system for predicting patient readmission risk
+        <ul>
+          <li>Developed hybrid model using XGBoost and Logistic Regression</li>
+          <li>Identifies root causes of readmission and provides personalized care plans</li>
+          <li>SMS alert system for healthcare professionals</li>
+          <li>Achieves high accuracy in risk classification</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="experience-item">
+      <div class="job-title">Lung Cancer Detection Using Images</div>
+      <div class="company">III Year Project</div>
+      <div class="date">2023 - 2024</div>
+      <div class="description">
+        Deep learning system for cancer detection and classification
+        <ul>
+          <li>Ensemble model combining CAE (Convolutional Autoencoder) and VGG19</li>
+          <li>Detects cancer type and stage from medical images</li>
+          <li>Deployed using Flask for user accessibility</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="experience-item">
+      <div class="job-title">Plant Disease Detection</div>
+      <div class="company">II Year Project</div>
+      <div class="date">2022 - 2023</div>
+      <div class="description">
+        Hybrid CNN + CAE model for agricultural disease detection
+        <ul>
+          <li>Hybrid model combining CNN and Convolutional Autoencoder</li>
+          <li>Detects various plant diseases from leaf images</li>
+          <li>Provides actionable solutions via Flask web interface</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACHIEVEMENTS & RECOGNITION -->
+  <div class="resume-section">
+    <h3>🏆 Achievements & Recognition</h3>
+    
+    <div class="achievement-item" style="margin-bottom: 1.5rem;">
+      <strong style="color: #00f2fe;">Academic Achievements:</strong>
+      <ul style="margin-top: 0.8rem; margin-left: 1rem; list-style: none;">
+        <li style="color: #d0d0d0; margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem;">
+          <span style="position: absolute; left: 0; color: #00f2fe; font-weight: bold;">▸</span>
+          2nd place in college-level Poster Presentation
+        </li>
+        <li style="color: #d0d0d0; margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem;">
+          <span style="position: absolute; left: 0; color: #00f2fe; font-weight: bold;">▸</span>
+          1st place in Tamil Speech Competition
+        </li>
+        <li style="color: #d0d0d0; margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem;">
+          <span style="position: absolute; left: 0; color: #00f2fe; font-weight: bold;">▸</span>
+          Published paper "Fish Classification Using CNN" in IEEE Xplore (RMKMATE Conference, Nov 2023)
+        </li>
+      </ul>
+    </div>
+
+    <div class="achievement-item" style="margin-bottom: 1.5rem;">
+      <strong style="color: #00f2fe;">Coding Excellence:</strong>
+      <ul style="margin-top: 0.8rem; margin-left: 1rem; list-style: none;">
+        <li style="color: #d0d0d0; margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem;">
+          <span style="position: absolute; left: 0; color: #00f2fe; font-weight: bold;">▸</span>
+          Solved 1000+ problems in SkillRank
+        </li>
+        <li style="color: #d0d0d0; margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem;">
+          <span style="position: absolute; left: 0; color: #00f2fe; font-weight: bold;">▸</span>
+          Silver badge in Python and SQL on HackerRank
+        </li>
+      </ul>
+    </div>
+
+    <div class="achievement-item" style="margin-bottom: 1.5rem;">
+      <strong style="color: #00f2fe;">Sports & Athletics:</strong>
+      <ul style="margin-top: 0.8rem; margin-left: 1rem; list-style: none;">
+        <li style="color: #d0d0d0; margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem;">
+          <span style="position: absolute; left: 0; color: #00f2fe; font-weight: bold;">▸</span>
+          2nd place in 400m district-level athletics
+        </li>
+        <li style="color: #d0d0d0; margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem;">
+          <span style="position: absolute; left: 0; color: #00f2fe; font-weight: bold;">▸</span>
+          50+ medals in various athletics competitions
+        </li>
+        <li style="color: #d0d0d0; margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem;">
+          <span style="position: absolute; left: 0; color: #00f2fe; font-weight: bold;">▸</span>
+          3rd place in 2km marathon
+        </li>
+        <li style="color: #d0d0d0; margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem;">
+          <span style="position: absolute; left: 0; color: #00f2fe; font-weight: bold;">▸</span>
+          Participated in district-level kabaddi and relay events
+        </li>
+      </ul>
+    </div>
+
+    <div class="achievement-item">
+      <strong style="color: #00f2fe;">Hobbies & Interests:</strong>
+      <p style="color: #d0d0d0; margin-top: 0.8rem;">
+        Dancing, Painting, Drawing, Watching Movies, Listening to Music, Sports
+      </p>
+    </div>
+  </div>
+
+  <!-- ACTION BUTTONS -->
+  <div class="text-center download-btn">
+    <a href="index.html" class="btn btn-glow px-5">← Back to Home</a>
+    <a href="projects.html" class="btn btn-glow px-5" style="margin-left: 1rem;">View All Projects →</a>
+    <a href="contact.html" class="btn btn-glow px-5" style="margin-left: 1rem;">Get in Touch →</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+  <p>&copy; 2026 Dayana. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
